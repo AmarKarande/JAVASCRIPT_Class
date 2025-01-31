@@ -17,8 +17,8 @@
 
 /**
  * Declaration of variables
- * 1) var =
- * 2) let
+ * 1) var = old time use
+ * 2) let = Currently used 
  * 3) const = if declare once cannot change
  */
 
@@ -44,9 +44,9 @@ console.log("fruits =", fruits);
 console.table(fruits);
 
 let emp = {
-  name: "amar",
-  age: 22,
-  salary: 0,
+  name: "nilesh",
+  age: 125,
+  salary: "10 lpa",
   location: "Pune",
 };
 console.table(emp);
