@@ -80,7 +80,6 @@ cars = {
 console.log("Cars = ", cars);
 console.log("Car Capacity = ", cars.car_capacity);
 console.log("Car Fuel= ", cars["car_fuel"]);
-
 cars = {
   car_company: "MAHINDRA",
   car_model: "THAR",
@@ -88,7 +87,6 @@ cars = {
   car_fuel: "Diesel",
   car_capacity: 4,
 };
-
 console.log("Cars = ", cars);
 console.log("Car model = ", cars.car_model);
 console.log("Car capacity= ", cars["car_capacity"]);
