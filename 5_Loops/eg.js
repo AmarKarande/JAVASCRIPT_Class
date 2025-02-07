@@ -1,12 +1,20 @@
-let giftbags = 100;
-let giftcount = 0;
-let participants = 7;
-let i = 1;
+let budget = 1000;
+let department = 5;
+let percentage = [20, 30, 20, 10, 10];
+// percentage.sort();
+// percentage.reverse();
 
-while (giftbags >= participants) {
-  giftcount++; // Count the gift bags distributed
-  giftbags = giftbags - participants; // Reduce the remaining gift bags
-  console.log("Remaining gift bags:", giftbags); // Output remaining gift bags
+for (let i = 0; i < 5; i++) {
+  let budget_allocate = budget * (percentage[i] / 100);
+
+  console.log(
+    `department = ${i + 1} percentage = ${
+      percentage[i]
+    } budget_Allocate = ${budget_allocate.toFixed(2)}`
+  );
+
+  // Deduct the allocated budget from the total budget
+  budget -= budget_allocate;
 }
 
-console.log("Total gift bags distributed:", giftcount);
+console.log("Remaining budget:", budget.toFixed(2));
