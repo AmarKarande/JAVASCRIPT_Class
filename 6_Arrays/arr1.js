@@ -48,3 +48,39 @@ console.log("typeof mapsArr: ", typeof mapsArr);
 let mapArr = arr.map((namd) => {
   console.log(namd);
 });
+
+// Filter : create a array that can
+
+let num = [12, 34, 5, 26, 74, 21, 67, 8, 99];
+let small = num.filter((n) => n <= 30);
+console.log("Small Array: ", small);
+let big = num.filter((n) => n > 30);
+console.log("Big Array : ", big);
+
+// Spread Operator: // ... // allows you to copy the elements of an array into a new array
+let namearr = [...arr];
+console.log("Name Arr: ", arr);
+
+//ArrayDestruction Operation = Store array values separately
+let [n1, n2, n3] = arr;
+console.log("n1 = ", n1);
+console.log("n2 = ", n2);
+console.log("n3 = ", n3);
+
+// Concat: Joins an two array
+let arr1 = [1, 2, 3, 4, 5];
+let arr2 = [6, 7, 8, 9, 10];
+let arr3 = arr1.concat(arr2);
+console.log("Arr3 = ", arr3);
+
+// reduce() = reduce an array in  a single value by applying function
+let numbers = [1, 2, 3, 4, 5];
+let sum = numbers.reduce((accumulator, current_val) => {
+  return accumulator + current_val;
+}, 0);
+console.log("Sum = ", sum);
+
+let mul = numbers.reduce((accumulator, current_val) => {
+  return accumulator * current_val;
+}, 1);
+console.log("Mul : ", mul);
