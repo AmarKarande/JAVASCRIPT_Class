@@ -84,3 +84,53 @@ let mul = numbers.reduce((accumulator, current_val) => {
   return accumulator * current_val;
 }, 1);
 console.log("Mul : ", mul);
+
+// Find : find the element based on condition
+let ars = [1, 2, 3, 4, 5, 6, 7];
+let found = ars.find((n) => n > 2);
+console.log("Target = ", found);
+let ind = ars.findIndex((n) => n == 3);
+console.log("Ind : ", ind);
+
+// some(): checks if at least one element passes the test
+let summ = ars.some((n) => n % 2 == 0);
+console.log("Some: ", summ);
+
+//every() - Checks if all elements pass the test
+let every = ars.every((n) => n >= 1);
+console.log("Every check : ", every);
+
+//slice() - Returns a shallow copy of a portion of an array
+// array.slice(start_index, end_index);
+
+let slice = ars.slice(1, 4);
+console.log("Using slice : ", slice);
+let names = ["Ak", "RK", "PK", "KK", "SK"];
+let nslice = names.slice(1, 4);
+console.log("Names after slice is=", nslice);
+
+//sort() - Sorts the array in place
+let array1 = [23, 12, 3, 42, 78, -1]; // compare here as string need to write diffrent code
+array1.sort();
+console.log("Sorted array is = ", array1);
+array1.sort((a, b) => a - b); // ascending order sort an aaray
+console.log("Ascending order sort array is = ", array1);
+array1.sort((a, b) => b - a);
+console.log("Descending order Sorted array is = ", array1);
+
+//reverse() - Reverses the array in place
+let array2 = [12, 43, 57, 12, 57, 2];
+array2.reverse();
+console.log("Reversed array is : ", array2);
+
+//flat() - Flattens a multi-dimensional array
+let array3 = [1, [2, 3], [4, 5], [1], [21, 23], [2, 4, 6]];
+let flatter = array3.flat();
+console.log("Array3 after flat:", flatter);
+
+//includes() - Checks if an array contains a specific element
+let array4 = [1, 2, 3, 4, 5, 6];
+let inc = array4.includes(3);
+console.log("Using Includes:", inc);
+let inc2 = array4.includes(10);
+console.log("Using Includes:", inc2);
