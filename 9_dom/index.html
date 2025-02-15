@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="p1">Hello World!</p>
+    <p class="p2"><h1>Amar!</h1><h2>Ak</h2></p>
+    <article>Lorem ipsum dolor sit amet.</article>
+
+    <p id="p3"></p>
+    <input type="text" id="eventkey" placeholder="enterKey" />
+    <p id="keypress"></p>
+    <!--  -->
+    <p id="eventid">ParaButton</p>
+    <input type="text" id="eventkey" placeholder="enterKey" />
+     <p id="keypress"></p>
+  </body>
+  <script>
+    let para1 = document.getElementById("p1");
+    console.log("Para 1 =", para1);
+    let p3=document.getElementById("p1").textContent;
+    console.log("P3=",p3);
+    
+    let para2 = document.getElementsByClassName("p2")[0];
+    console.log("Para 2=", para2);
+    
+    let art= document.getElementsByTagName("article");
+    console.log("Arrticle=",art[0]);
+    
+    let c1=document.querySelector("p.p3");
+    console.log("p3",c1);
+        let c2 = document.querySelector("p#p2");
+    console.log("querySelector:", c2);
+
+    document.getElementById("eventid").addEventListener("mouseover", function(){
+    document.getElementById("eventid").textContent="amarkarande";
+    document.getElementById("eventid").style.backgroundColor = "Red";
+ });
+     document
+      .getElementById("eventid")
+      .addEventListener("mouseout", function () {
+        document.getElementById("eventid").textContent = "ParaButton";
+        document.getElementById("eventid").style.backgroundColor =
+          "transparent";
+      });
+      document.getElementById("eventkey").addEventListener("keydown", logKey);
+    function logKey(e) {
+      document.getElementById("keypress").textContent = `Key=${e.key}`;
+    };
+  </script>
+</html>
